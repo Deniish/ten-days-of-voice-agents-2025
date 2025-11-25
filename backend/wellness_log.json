@@ -1,11 +1,11 @@
 [
     {
-        "timestamp": "2025-11-24T15:36:56.349195",
-        "mood": "depressed",
-        "energy": "very low",
+        "timestamp": "2025-11-24T16:34:58.355597",
+        "mood": "weak",
+        "energy": "low",
         "objectives": [
-            "drink a glass of water"
+            "complete my task"
         ],
-        "summary": "The user reported feeling depressed with very low energy. After declining initially, the user set one small intention: 'drink a glass of water.' The user was encouraged to seek professional help for persistent feelings of depression."
+        "summary": "You're feeling weak with low energy, and your goal is to complete your task. I suggested breaking the task into smaller steps and taking short breaks."
     }
 ]
