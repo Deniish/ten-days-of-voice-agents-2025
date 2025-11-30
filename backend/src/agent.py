@@ -692,7 +692,7 @@ async def last_order(
     return "\n".join(lines)
 
 # -------------------------
-# The Agent (Ramu Kaka)
+# The Agent (Guss)
 # -------------------------
 class GameMasterAgent(Agent):
     def __init__(self):
@@ -728,7 +728,7 @@ def prewarm(proc: JobProcess):
 async def entrypoint(ctx: JobContext):
     ctx.log_context_fields = {"room": ctx.room.name}
     logger.info("\n" + "🛍️" * 6)
-    logger.info("🚀 STARTING VOICE E-COMMERCE AGENT (Los Pollos Shop) — Ramu Kaka")
+    logger.info("🚀 STARTING VOICE E-COMMERCE AGENT (Los Pollos Shop) — Guss")
 
     userdata = Userdata()
 
@@ -745,7 +745,7 @@ async def entrypoint(ctx: JobContext):
         userdata=userdata,
     )
 
-    # Start the agent session with the GameMasterAgent (Ramu Kaka)
+    # Start the agent session with the GameMasterAgent (Guss)
     await session.start(
         agent=GameMasterAgent(),
         room=ctx.room,
