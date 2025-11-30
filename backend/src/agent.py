@@ -1,5 +1,3 @@
-
-
 import json
 import logging
 import os
@@ -38,7 +36,7 @@ logger.addHandler(handler)
 load_dotenv(".env.local")
 
 # -------------------------
-# Simple Product Catalog (Dr Abhishek Shop)
+# Simple Product Catalog (Los Pollos Shop)
 # -------------------------
 # A compact Indian-flavored catalog with attributes: id, name, price (INR), category, color, sizes
 CATALOG = [
@@ -54,7 +52,7 @@ CATALOG = [
     },
     {
         "id": "tee-001",
-        "name": "Dr Abhishek Tee (Cotton)",
+        "name": "Los Pollos Tee (Cotton)",
         "description": "Comfort-fit cotton t-shirt with subtle logo.",
         "price": 799,
         "currency": "INR",
@@ -478,7 +476,7 @@ async def show_catalog(
     if not prods:
         return "Sorry — I couldn't find any items that match. Would you like to try another search?"
     # Summarize top 8
-    lines = [f"Here are the top {min(8, len(prods))} items I found at Dr Abhishek Shop:"]
+    lines = [f"Here are the top {min(8, len(prods))} items I found at Los Pollos Shop:"]
     for idx, p in enumerate(prods[:8], start=1):
         size_info = f" (sizes: {', '.join(p['sizes'])})" if p.get('sizes') else ""
         lines.append(f"{idx}. {p['name']} — {p['price']} {p['currency']} (id: {p['id']}){size_info}")
@@ -587,7 +585,7 @@ async def show_catalog(
     if not prods:
         return "Sorry — I couldn't find any items that match. Would you like to try another search?"
     # Summarize top 4
-    lines = [f"Here are the top {min(4, len(prods))} items I found at Dr Abhishek Shop:"]
+    lines = [f"Here are the top {min(4, len(prods))} items I found at Los Pollos Shop:"]
     for idx, p in enumerate(prods[:4], start=1):
         lines.append(f"{idx}. {p['name']} — {p['price']} {p['currency']} (id: {p['id']})")
     lines.append("You can say: 'I want the second item in size M' or 'add mug-001 to my cart, quantity 2'.")
@@ -730,7 +728,7 @@ def prewarm(proc: JobProcess):
 async def entrypoint(ctx: JobContext):
     ctx.log_context_fields = {"room": ctx.room.name}
     logger.info("\n" + "🛍️" * 6)
-    logger.info("🚀 STARTING VOICE E-COMMERCE AGENT (Dr Abhishek Shop) — Ramu Kaka")
+    logger.info("🚀 STARTING VOICE E-COMMERCE AGENT (Los Pollos Shop) — Ramu Kaka")
 
     userdata = Userdata()
 
